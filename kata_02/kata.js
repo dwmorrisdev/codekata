@@ -9,10 +9,11 @@
 // returns a boolean that indicates whether or not
 // the first string is an anagram of the second string.
 
-const isAlphanumeric = (value) => Boolean(value.match(/[a-z]/i));
-const cleanString = (string) => string?.toLowerCase().split('').sort();
+
 
 function myFunction(str1, str2) {
+  const isAlphanumeric = (value) => Boolean(value.match(/[a-z]/i));
+  const cleanString = (string) => string?.toLowerCase().split('').sort();
   // example input, eat & ate 
   // returns true
   // kata code here

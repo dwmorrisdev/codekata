@@ -69,7 +69,7 @@ test('Test 17: greet & meets', () => {
 });
 
 test('Test 18: Editor & redo it', () => {
-  expect(myFunction('')).toBe(true);
+  expect(myFunction('Editor', 'redo it')).toBe(true);
 });
 
 test('Test 19: snooze alarms & Alas, no more Zs', () => {
