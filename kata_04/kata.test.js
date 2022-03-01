@@ -1,3 +1,5 @@
+const myFunction = require('./kata');
+
 describe('Code Kata: Multiplication Matrixes', () => {
   test('Test 1: 0:0', () => {
     expect(myFunction(0,0)).toBe([]);
