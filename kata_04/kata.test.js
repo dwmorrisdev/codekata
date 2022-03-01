@@ -2,11 +2,11 @@ const myFunction = require('./kata');
 
 describe('Code Kata: Multiplication Matrixes', () => {
   test('Test 1: 0:0', () => {
-    expect(myFunction(0,0)).toBe([]);
+    expect(myFunction(0,0)).toEqual([]);
   });
   
   test('Test 2: 5:5', () => {
-    expect(myFunction(5,5)).toBe([
+    expect(myFunction(5,5)).toEqual([
       [1, 2, 3, 4, 5],
       [2, 4, 6, 8, 10], 
       [3, 6, 9, 12, 15],
@@ -16,7 +16,7 @@ describe('Code Kata: Multiplication Matrixes', () => {
   });
   
   test('Test 3: 3:3', () => {
-    expect(myFunction(3,3)).toBe([
+    expect(myFunction(3,3)).toEqual([
       [1, 2, 3],
       [2, 4, 6], 
       [3, 6, 9],
@@ -24,14 +24,15 @@ describe('Code Kata: Multiplication Matrixes', () => {
   });
   
   test('Test 4: 2:4', () => {
-    expect(myFunction(2,4)).toBe([
+    const result = myFunction(2,4);
+    expect(result).toEqual([
       [1, 2, 3, 4],
       [2, 4, 6, 8]
     ]);
   });
   
   test('Test 5: 4:6', () => {
-    expect(myFunction(4,6)).toBe([
+    expect(myFunction(4,6)).toEqual([
       [1, 2, 3, 4, 5, 6],
       [2, 4, 6, 8, 10, 12], 
       [3, 6, 9, 12, 15, 18],
@@ -40,7 +41,7 @@ describe('Code Kata: Multiplication Matrixes', () => {
   });
   
   test('Test 6: 12:12', () => {
-    expect(myFunction(12,12)).toBe([
+    expect(myFunction(12,12)).toEqual([
       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       [2, 4, 6, 8, 10, 12, 14, 16 ,18, 20, 22, 24], 
       [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36],
@@ -57,11 +58,11 @@ describe('Code Kata: Multiplication Matrixes', () => {
   });
   
   test('Test 7: -1:9', () => {
-    expect(myFunction(-1,9)).toBe([]);
+    expect(myFunction(-1,9)).toEqual([]);
   });
   
   test('Test 8: 10:10', () => {
-    expect(myFunction(10,10)).toBe([
+    expect(myFunction(10,10)).toEqual([
       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       [2, 4, 6, 8, 10, 12, 14, 16 ,18, 20], 
       [3, 6, 9, 12, 15, 18, 21, 24, 27, 30],
@@ -76,11 +77,11 @@ describe('Code Kata: Multiplication Matrixes', () => {
   });
   
   test('Test 9: 15:a', () => {
-    expect(myFunction(15, 'a')).toBe([]);
+    expect(myFunction(15, 'a')).toEqual([]);
   });
   
   test('Test 10: 9:7', () => {
-    expect(myFunction(9,7)).toBe([
+    expect(myFunction(9,7)).toEqual([
       [1, 2, 3, 4, 5, 6, 7],
       [2, 4, 6, 8, 10, 12, 14], 
       [3, 6, 9, 12, 15, 18, 21],
