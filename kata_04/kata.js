@@ -10,10 +10,8 @@
 const rowBuilder = (index, y) => {
   let arr = [];
   for (let counter = 1; counter <= y; counter++) { 
-    const nextValue = index * counter;
-    arr.push(nextValue);
+    arr.push(index * counter);
   }
-  if(arr.length === 0) return;
   return arr;
 };
 
@@ -33,9 +31,7 @@ function myFunction(x, y) {
   let response = [];
   for (let i = 1; i <= x; i++) {
     const nextRow = rowBuilder(i, y); 
-    if(Array.isArray(nextRow)){
-      response.push(nextRow);
-    }
+    nextRow.length && response.push(nextRow);
   }
   return response;
 }
